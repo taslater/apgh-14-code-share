@@ -1,6 +1,6 @@
 # Academy Pittsburgh Session 14 Code Share
 
-A place to collect student projects from Academy Pittsburgh Session 14
+A place to collect student projects and share what we're learning
 
 ## People ##
 
