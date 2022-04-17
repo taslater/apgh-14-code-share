@@ -1,5 +1,3 @@
-Twitter Example with Array
-``` csharp
 using System;
 using System.Collections.Generic;
 
@@ -98,5 +96,4 @@ namespace Session14Week2
             Console.WriteLine("It was posted on " + PostedOn);
         }
     }
-
 }

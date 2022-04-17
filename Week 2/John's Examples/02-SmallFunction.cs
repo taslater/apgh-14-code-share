@@ -1,5 +1,3 @@
-Function small example
-```
 using System;
 
 namespace Session14Week2
