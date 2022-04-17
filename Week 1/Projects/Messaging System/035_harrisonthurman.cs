@@ -1,4 +1,4 @@
-```            string[] messages = new string[3];
+            string[] messages = new string[3];
             int index = 1;
             int on = 1;
             while (on == 1)
@@ -51,6 +51,3 @@
                 {
                     on = 0;
                 }
-
-
-```
