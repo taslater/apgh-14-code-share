@@ -1,0 +1,31 @@
+> <@taslater:matrix.workhardpgh.com> Regex 4 LYFE
+> 
+> ```csharp
+> using System;
+> using System.Text.RegularExpressions;
+> 
+> namespace MadlibRegex
+> {
+>     class Program
+>     {
+>         static void Main(string[] args)
+>         {
+>             string outline = "[Author] wrote my favorite book [book] and sometimes I [verb] the pages [adverb].";
+> 
+>             Console.WriteLine("Let's do a madlib! What could possibly go wrong?!\n");
+>             foreach (Match m in Regex.Matches(outline, @"\[(.*?)\]"))
+>             {
+>                 string matchValue = m.Value;
+>                 string matchPhrase = matchValue[1..^1];
+>                 Console.WriteLine($"Please enter a {matchPhrase}:");
+>                 string replaceWith = Console.ReadLine();
+>                 Regex replaceMe = new Regex(Regex.Escape(matchValue));
+>                 outline = replaceMe.Replace(outline, replaceWith, 1);
+>             }
+> 
+>             Console.WriteLine($"\nHere it is, you sick sunuvagun:\n{outline}");
+>         }
+>     }
+> }
+
+Can you write out, in english, what that Regex is doing on line 13?

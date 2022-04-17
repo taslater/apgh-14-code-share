@@ -1,0 +1,140 @@
+battleship with Jean at end of class:
+```
+using System;
+
+namespace battleship14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // ======== setup of the game!
+            // ~make a map - an array - 2-dimensional array
+            // ~put ships on the map - a "ship" is just one point
+
+            // ========= the game loop!
+            // ~show the user the map
+            // ~ask the user for coordinates - l-r & u-d\
+            // ~show where the user hit
+            // ~see if the user hit a ship
+            // ~react to if they hit/missed
+            // ~clear the location of the ship
+            // see comments - check to see if they've hit all the ships
+            // ~go back to beginning of loop
+
+            // ========== game end
+            // ~you won, you hit all the ships!
+
+
+            // setup
+            Console.WriteLine("Welcome to BattleShip!");
+            // set up the map
+            int[,] map = new int[3, 3];
+            // add a ship
+            map[1, 1] = 1;
+            // test hits and misses
+            // map[1,2] = 2;
+            // map[2,2] = 3;
+
+
+            // Jean's key:
+            // 0: unguessed water
+            // 1: unguessed ship
+            // 2: guessed water - miss
+            // 3: guessed ship - hit
+
+            // count the ships
+            // variable: shipsLeft
+
+            // main loop
+            // while (shipsLeft > 0)
+            while (true)
+            {
+                // show the user the map\
+                // print a key
+                Console.WriteLine("~ is water, . is miss, # is hit");
+                // hardcoded values?!?!??!?!?!?!
+                Console.WriteLine("  1 2 3 ");
+                // big loop - one time through is one row
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Write((i+1) + " ");
+                    // little loop - one time through is one space
+                    for (int j = 0; j < 3; j++)
+                    {
+                        //check this location
+                        // if it's a 0, print ~
+                        // if it's a 1, print @
+                        // if it's a 2, print .
+                        // if it's a 3, print #
+
+                        if (map[i, j] == 0)
+                        {
+                            Console.Write("~ ");
+                        }
+                        else if(map[i, j] == 1)
+                        {
+                            Console.Write("~ ");
+                        }
+                        else if (map[i, j] == 2)
+                        {
+                            Console.Write(". ");
+                        }
+                        else if (map[i, j] == 3)
+                        {
+                            Console.Write("# ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+
+                // ask the user for coordinates - l - r & u - d
+                // ask for side number
+                Console.WriteLine("Please give me a side number:");
+                string sideNumber = Console.ReadLine();
+
+                // ask for top number
+                Console.WriteLine("Please give me a top number:");
+                string topNumber = Console.ReadLine();
+
+                // change the data according to their guess -
+                // if they hit a ship, change it to a hit, tell them they hit
+                // if they hit a water, change it to a miss, tell them they missed
+
+                // print out what is in the grid at that location
+                // TODO: What if they gave us not a number???!!!
+                // TODO: what if they gave us something out of bounds?
+                int side = Convert.ToInt32(sideNumber) - 1;
+                int top =  Convert.ToInt32(topNumber) - 1;
+                int dataAtGuess = map[side, top];
+                Console.WriteLine(dataAtGuess);
+                Console.ReadLine();
+
+                if(dataAtGuess == 1) {
+                    map[side, top] = 3;
+                    Console.WriteLine("You hit one of my ships!");
+                }
+                if(dataAtGuess == 0) {
+                    map[side, top] = 2;
+                    Console.WriteLine("You MISSED!!!!!");
+                }
+
+                // Console.WriteLine("side is: " + sideNumber + ", top is: " + topNumber);
+                // Console.ReadLine();
+                // wipe the screen
+                Console.Clear();
+
+                // count the ships
+                // tell the user: 
+                // you have ___ ships left to hit!
+                // update shipsLeft
+            }
+
+            // game end
+
+            Console.WriteLine("You are the winningest winner that has ever winned.");
+        }
+    }
+}
+
+```

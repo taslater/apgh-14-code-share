@@ -1,0 +1,49 @@
+Messages - One Space
+```
+using System;
+
+namespace Session14Kata01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // message system
+            // show a menu that is like 'press a to save a message, b to retrieve, q to quit'
+            // if they pick a, save a message
+            // ask them for their message
+            // save it somewhere?
+            // if they pick b, show a message
+            // if they pick q, close the program
+            string message = "default crab";
+            bool shouldIKeepLooping = true;
+            while (shouldIKeepLooping == true) 
+            { 
+                Console.WriteLine("Welcome to the message system. Please press a to leave a message, b to retrieve a message, or q to quit.");
+                string weWillAllTurntoCrabs = Console.ReadLine();
+
+                if (weWillAllTurntoCrabs == "a")
+                {
+                    // Save a message
+                    Console.WriteLine("What is your message?");
+                    message = Console.ReadLine();
+                }
+                else if (weWillAllTurntoCrabs == "b")
+                {
+                    // Retrieve a message
+                    Console.WriteLine(message);
+                }
+                else if (weWillAllTurntoCrabs == "q")
+                {
+                    Console.WriteLine("quit");
+                    shouldIKeepLooping = false;
+                }
+                else
+                {
+                    Console.WriteLine("I guess you're a crab already.");
+                }
+
+            } 
+        }
+    }
+}

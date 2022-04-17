@@ -1,0 +1,44 @@
+Menu for Messages
+```
+using System;
+
+namespace Session14Kata01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // message system
+            // show a menu that is like 'press a to save a message, b to retrieve, q to quit'
+            // if they pick a, save a message
+            // if they pick b, show a message
+            // if they pick q, close the program
+
+            bool shouldIKeepLooping = true;
+            while (shouldIKeepLooping == true) 
+            { 
+                Console.WriteLine("Welcome to the message system. Please press a to leave a message, b to retrieve a message, or q to quit.");
+                string weWillAllTurntoCrabs = Console.ReadLine();
+
+                if (weWillAllTurntoCrabs == "a")
+                {
+                    Console.WriteLine("save a message");
+                }
+                else if (weWillAllTurntoCrabs == "b")
+                {
+                    Console.WriteLine("show a message");
+                }
+                else if (weWillAllTurntoCrabs == "q")
+                {
+                    Console.WriteLine("quit");
+                    shouldIKeepLooping = false;
+                }
+                else
+                {
+                    Console.WriteLine("I guess you're a crab already.");
+                }
+
+            } 
+        }
+    }
+}

@@ -1,0 +1,29 @@
+Drawing a Grid
+```
+using System;
+
+namespace Session14Kata01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] grid = new int[8, 8];
+
+            grid[0, 0] = 7;
+            grid[1, 5] = 8;
+            grid[5, 2] = 3;
+
+            // for printing a 2D array
+            for (int row = 0; row < 8; row++)
+            {
+                for (int column = 0; column < 8; column++)
+                {
+                    Console.Write(grid[row, column]);
+                }
+
+                Console.WriteLine();
+            }
+        }
+    }
+}

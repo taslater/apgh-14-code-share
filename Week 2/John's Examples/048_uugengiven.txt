@@ -1,0 +1,89 @@
+version before break, battleship with Jean:
+```
+using System;
+
+namespace battleship14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // ======== setup of the game!
+            // ~make a map - an array - 2-dimensional array
+            // ~put ships on the map - a "ship" is just one point
+
+            // ========= the game loop!
+            // ~show the user the map
+            // ask the user for coordinates - l-r & u-d
+            // see if the user hit a ship
+            // react to if they hit/missed
+            // clear the location of the ship
+            // check to see if they've hit all the ships
+            // ~go back to beginning of loop
+
+            // ========== game end
+            // ~you won, you hit all the ships!
+
+
+            // setup
+            Console.WriteLine("Welcome to BattleShip!");
+            // set up the map
+            int[,] map = new int[3, 3];
+            // add a ship
+            map[1, 1] = 1;
+
+
+            // main loop
+            while (true)
+            {
+                // show the user the map
+                // hardcoded values?!?!??!?!?!?!
+                Console.WriteLine("  1 2 3 ");
+                // big loop - one time through is one row
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Write((i+1) + " ");
+                    // little loop - one time through is one space
+                    for (int j = 0; j < 3; j++)
+                    {
+                        //check this location
+                        // if it's a 0, print ~
+                        // if it's a 1, print @ Δ
+
+                        if (map[i, j] == 0)
+                        {
+                            Console.Write("~ ");
+                        }
+                        else
+                        {
+                            Console.Write("@ ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+
+                // // ask the user for coordinates - l - r & u - d
+                // // ask for side number
+                // Console.WriteLine("Please give me a side number:");
+                // string sideNumber = Console.ReadLine();
+
+                // // ask for top number
+                // Console.WriteLine("Please give me a top number:");
+                // string topNumber = Console.ReadLine();
+
+                // ask the user for input to pause the program
+                Console.WriteLine("Where do you want to shooot??@!?!?!");
+                Console.ReadLine();
+
+                // wipe the screen
+                Console.Clear();
+            }
+
+            // game end
+
+            Console.WriteLine("You are the winningest winner that has ever winned.");
+        }
+    }
+}
+
+```

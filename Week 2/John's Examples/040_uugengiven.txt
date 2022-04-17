@@ -1,0 +1,56 @@
+Messages - With Array
+```
+using System;
+
+namespace Session14Kata01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // message system
+            // show a menu that is like 'press a to save a message, b to retrieve, q to quit'
+            // if they pick a, save a message
+            // ask them for their message
+            // save it somewhere?
+            // if they pick b, show a message
+            // if they pick q, close the program
+            //string message = "default crab";
+            string[] messages = new string[5];
+            int currentMessageNumber = 0;
+
+            bool shouldIKeepLooping = true;
+            while (shouldIKeepLooping == true) 
+            { 
+                Console.WriteLine("Welcome to the message system. Please press a to leave a message, b to retrieve a message, or q to quit.");
+                string weWillAllTurntoCrabs = Console.ReadLine();
+
+                if (weWillAllTurntoCrabs == "a")
+                {
+                    // Save a message
+                    Console.WriteLine("What is your message?");
+                    messages[currentMessageNumber] = Console.ReadLine();
+                    Console.WriteLine("Your message is stored in box " + currentMessageNumber);
+                    currentMessageNumber++;
+                }
+                else if (weWillAllTurntoCrabs == "b")
+                {
+                    // Retrieve a message
+                    Console.WriteLine("What message number would you like to see?");
+                    int userNumber = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(messages[userNumber]);
+                }
+                else if (weWillAllTurntoCrabs == "q")
+                {
+                    Console.WriteLine("quit");
+                    shouldIKeepLooping = false;
+                }
+                else
+                {
+                    Console.WriteLine("I guess you're a crab already.");
+                }
+
+            } 
+        }
+    }
+}
