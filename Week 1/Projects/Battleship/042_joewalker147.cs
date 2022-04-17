@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace battleship
@@ -11,14 +10,12 @@ namespace battleship
             int[,] grid = new int[8, 8];
             int hitcounter = 0;
 
-            int[,] grid2 = new int[8, 8];
-            
 
             bool game = true;
 
-            grid[3, 7] = 1;
-            grid[7, 7] = 1;
-            grid[1, 4] = 1;
+            grid[3, 7] = 5;
+            grid[7, 7] = 8;
+            grid[1, 4] = 3;
 
 
 
@@ -26,7 +23,7 @@ namespace battleship
             {
                 for (int column = 0; column < 8; column++)
                 {
-                    Console.Write(grid2[row, column]);
+                    Console.Write(grid[row, column]);
                 }
                 Console.WriteLine();
             }
@@ -70,4 +67,6 @@ namespace battleship
 
         }
     }
+
 }
+

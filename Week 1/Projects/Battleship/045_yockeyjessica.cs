@@ -1,5 +1,3 @@
-```
-
 using System;
 
 namespace Session14Battleship
@@ -95,4 +93,3 @@ namespace Session14Battleship
         }
     }
 }
-```
