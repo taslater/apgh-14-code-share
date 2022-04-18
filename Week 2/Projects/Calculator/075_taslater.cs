@@ -1,8 +1,8 @@
-Help, I need something better to do with my evenings!
+// Help, I need something better to do with my evenings!
 
-Solution to "Calculator" (string parsing) using regex to split the input including some tests. I would love to throw helpful errors for malformed inputs, but it doesn't yet.
+// Solution to "Calculator" (string parsing) using regex to split the input including some tests. I would love to throw helpful errors for malformed inputs, but it doesn't yet.
 
-```csharp
+
 using System;
 using System.Text.RegularExpressions;
 
@@ -112,8 +112,3 @@ namespace Calculator
         }
     }
 }
-```
-
-Any suggestions?
-
-Also, does anyone know why my Element code blocks don't have pretty colors?

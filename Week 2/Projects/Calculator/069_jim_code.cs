@@ -1,5 +1,5 @@
-Current working code for team 3: Yemi Truechild (she/her) Spenser Greeley andrew 
-```csharp
+// Current working code for team 3: Yemi Truechild (she/her) Spenser Greeley andrew 
+
 using System;
 
 namespace Calculator01
@@ -9,7 +9,7 @@ namespace Calculator01
         static void Main(string[] args)
         {
 
-Console.WriteLine("Hey, I'm a calculator! What should I do?");
+            Console.WriteLine("Hey, I'm a calculator! What should I do?");
             string input = Console.ReadLine();
 
             double firstNumber = char.GetNumericValue(input, 0);
@@ -23,6 +23,6 @@ Console.WriteLine("Hey, I'm a calculator! What should I do?");
             {
                 Console.WriteLine(firstNumber - secondNumber);
             }
-   }
+        }
     }
-}```
+}

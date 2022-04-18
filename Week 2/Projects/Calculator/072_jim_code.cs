@@ -1,8 +1,8 @@
-Yemi Truechild (she/her): Spenser Greeley andrew 
+// Yemi Truechild (she/her): Spenser Greeley andrew 
 
-Current working bonus code for team 3:
+// Current working bonus code for team 3:
 
-```csharp
+
 using System;
 
 namespace Calculator01
@@ -80,4 +80,3 @@ namespace Calculator01
         }
     }
 }
-``` 

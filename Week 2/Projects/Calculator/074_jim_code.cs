@@ -1,8 +1,7 @@
-Yemi Truechild (she/her): Spenser Greeley andrew 
+// Yemi Truechild (she/her): Spenser Greeley andrew 
 
-2nd version for bonus code using "Splits", team 3:
+// 2nd version for bonus code using "Splits", team 3:
 
-```csharp
 using System;
 
 namespace Calculator01
@@ -51,4 +50,4 @@ namespace Calculator01
 
         }
     }
-}```
+}

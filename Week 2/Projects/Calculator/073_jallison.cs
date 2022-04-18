@@ -1,6 +1,5 @@
-Latest Working Code
+// Latest Working Code
 
-```
 using System;
 
 namespace Calculator
@@ -28,7 +27,7 @@ namespace Calculator
             //keeps track of whether previous character is an integer or an operator
             bool isinteger = true;
             //loops over user input one character at a time
-            for(int i = 0; i < math.Length; i++)
+            for (int i = 0; i < math.Length; i++)
             {
                 //Console.WriteLine(math[i]);
                 char potato = math[i];
@@ -95,4 +94,3 @@ namespace Calculator
         }
     }
 }
-```

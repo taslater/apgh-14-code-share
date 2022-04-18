@@ -1,6 +1,6 @@
-Joe W (he/him) donna.san davidlasky 
+// Joe W (he/him) donna.san davidlasky 
 
-```csharp
+
 using System;
 
 namespace Calculator
@@ -92,4 +92,3 @@ namespace Calculator
         }
     }
 }
-```
