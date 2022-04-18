@@ -1,3 +1,3 @@
 # Week 3 In-class Examples #
 
-In-class examples go here
+Week 1 of Ruby examples go here
