@@ -1,8 +1,3 @@
-import os
-from this import d
-from tokenize import group
-from unittest import result
-
 groups_path = './group_history.md'
 
 with open(groups_path, 'r') as f:
