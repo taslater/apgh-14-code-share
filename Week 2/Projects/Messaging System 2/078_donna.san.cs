@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace Array
@@ -22,7 +21,7 @@ namespace Array
                 if (response == "a")
                 {
                     Console.WriteLine("Type your message");
-                    
+
                     //while (counter < 10)
                     messages[counter] = Console.ReadLine();
                     counter = counter + 1;
@@ -35,7 +34,7 @@ namespace Array
                     Console.WriteLine("Enter number to retrieve message");
                     int code = Convert.ToInt32(Console.ReadLine());
                     //code = counter;
-                    Console.WriteLine(messages[code -1]);
+                    Console.WriteLine(messages[code - 1]);
 
                 }
                 if (response == "c")
@@ -50,4 +49,3 @@ namespace Array
         }
     }
 }
-```

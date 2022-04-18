@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace RomanNumeralKata01
@@ -11,10 +10,11 @@ namespace RomanNumeralKata01
             //Delete a message, or replace
             //Fixed size array, if we add too many messages, write a message that says you cannot do that
             //If someone asks for a message number that doesn't exist, have a message saying that that one does not exist
-            string[] messages = new string[4];
-            string[] names = new string[4];
+            Person[] allMessages = new Person[10];
             int index = 0;
             int on = 1;
+            // create a person array to store our variables
+            //replace the individual arrays with class array in for loop
             while (on == 1)
             {
                 Console.WriteLine("Please make a choice ");
@@ -26,16 +26,18 @@ namespace RomanNumeralKata01
 
                 if (reply == "a")
                 {
-                    if (index <= messages.Length - 1)
+                    if (index <= allMessages.Length - 1)
                     {
                         //ask for a name
                         //read & store that name
                         //create an array
                         //create a class if time allows
+
+                        allMessages[index] = new Person();
                         Console.WriteLine("Please leave your name.");
-                        names[index] = Console.ReadLine();
+                        allMessages[index].name = Console.ReadLine();
                         Console.WriteLine("Please leave a message ");
-                        messages[index] = Console.ReadLine();
+                        allMessages[index].message = Console.ReadLine();
                         Console.WriteLine("Your message number is: " + index);
                         index = index + 1;
                     }
@@ -58,17 +60,17 @@ namespace RomanNumeralKata01
                     }
                     else
                     {
-                        Console.WriteLine(names[id]+" left you a message!");
-                        Console.WriteLine(messages[id]);
+                        Console.WriteLine(allMessages[id].name + " left you a message!");
+                        Console.WriteLine(allMessages[id].message);
                     }
                 }
 
                 //else if (reply == "c")
                 //{
-                    //Console.WriteLine("What is the number of the message you would like to delete?");
-                    //int id = Convert.ToInt32(Console.ReadLine());
-                    //messages[id] = "This message doesn't exist, spooky";
-                    //Console.WriteLine("Your message has been deleted");
+                //Console.WriteLine("What is the number of the message you would like to delete?");
+                //int id = Convert.ToInt32(Console.ReadLine());
+                //messages[id] = "This message doesn't exist, spooky";
+                //Console.WriteLine("Your message has been deleted");
                 //}
 
                 else if (reply == "d")
@@ -78,8 +80,15 @@ namespace RomanNumeralKata01
                 else
                 {
                     Console.WriteLine("Option does not exist. Please enter either A, B, C, or D.");
+
                 }
             }
+        }
+        class Person
+        {
+            public string name;
+            public string message;
+
         }
     }
 }

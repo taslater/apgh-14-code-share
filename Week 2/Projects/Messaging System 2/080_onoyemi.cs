@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace MessageSystem
@@ -46,9 +45,6 @@ namespace MessageSystem
             //Message instance2 = new Message();
             //instance2.Print();
 
-
-
         }
     }
 }
-```

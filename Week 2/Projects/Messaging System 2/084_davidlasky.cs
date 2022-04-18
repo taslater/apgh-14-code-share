@@ -1,5 +1,4 @@
 
-```
 using System;
 
 namespace MessageSystem
@@ -19,7 +18,7 @@ namespace MessageSystem
     {
         static void Main(string[] args)
         {
-            
+
             Message[] messageBank = new Message[10];
             int messageBankIndex = 0;
 
@@ -50,7 +49,7 @@ namespace MessageSystem
                 {
                     Console.WriteLine("What's the name of the jerk that left the message?");
                     string requestedName = Console.ReadLine();
-                    foreach(Message message in messageBank)
+                    foreach (Message message in messageBank)
                     //for(int 1=0; i< messageBank.Length; i++ )
                     {
                         if (message.Name == requestedName)
@@ -97,4 +96,3 @@ namespace MessageSystem
         }
     }
 }
-```
