@@ -1,4 +1,4 @@
-# Group 
+# Group History #
 
 ## Week 2 Day 4 - Mad Libs ##
 

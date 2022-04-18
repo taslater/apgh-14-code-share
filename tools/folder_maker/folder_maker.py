@@ -19,5 +19,3 @@ for line in lines:
     elif line[:2] == '* ':
         person_name = line[2:].strip()
         result_dict[project_name][group_int].append(person_name)
-
-print(result_dict)
