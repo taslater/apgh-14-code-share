@@ -185,7 +185,7 @@ while counter < 10
 end
 ```
 
-For loops in ruby are actually each loops:
+For loops in ruby are actually each loops. They 'grab' each value one-by-one...?
 
 ```ruby
 (1..10).each do |i|
@@ -207,3 +207,19 @@ Prints 100 ten times.
     puts i
 end
 ```
+
+### Ruby Loop Controls ###
+
+#### Next ####
+
+very common
+
+basically `continue`?
+
+#### Redo ####
+
+quite rare
+
+#### Retry ####
+
+extremely rare
