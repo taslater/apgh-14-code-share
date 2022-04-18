@@ -1,6 +1,5 @@
-Regex 4 LYFE
+// Regex 4 LYFE
 
-```csharp
 using System;
 using System.Text.RegularExpressions;
 
@@ -77,5 +76,3 @@ namespace MadlibRegex
         }
     }
 }
-
-```

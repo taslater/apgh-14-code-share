@@ -1,5 +1,5 @@
-imaniemanuel: Rich Stanley jallison Me
-```
+// imaniemanuel: Rich Stanley jallison Me
+
 using System;
 
 namespace TeamJagLibs
@@ -54,8 +54,8 @@ namespace TeamJagLibs
 
             //string story = "? wrote my favorite book[book] and sometimes I[verb] the pages[adverb].";
             //foreach(Char '[' in story);
-            
-            
+
+
             string story = "[Author] wrote my favorite book [title] and sometimes I [verb] the pages [adverb].";
 
             bool offon = true;
@@ -83,8 +83,8 @@ namespace TeamJagLibs
                 int position8 = story.IndexOf(']');
                 string word4 = story.Substring(position7, position8 - position7 + 1);
                 Console.WriteLine("Provide an adverb ");
-                story = story.Replace(word4, Console.ReadLine());                                                                         
-                 
+                story = story.Replace(word4, Console.ReadLine());
+
                 Console.WriteLine(story);
 
 
@@ -94,7 +94,6 @@ namespace TeamJagLibs
                 }
             }
             //Console.ReadLine();
-
         }
     }
 }

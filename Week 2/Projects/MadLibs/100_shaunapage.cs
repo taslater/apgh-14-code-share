@@ -1,4 +1,3 @@
-```csharp
 using System;
 
 namespace decoder_ring
@@ -13,14 +12,14 @@ namespace decoder_ring
             Console.WriteLine("Please give us a noun . ");
             string answer1 = Console.ReadLine();
 
-                for (int i = 0; i < madlib.Length; i++)
+            for (int i = 0; i < madlib.Length; i++)
             {
                 if (madlib[i] == '[')
                 {
-                   
+
 
                     Console.WriteLine(i);
-                    start = i; 
+                    start = i;
                 }
                 if (madlib[i] == ']')
                 {
@@ -28,18 +27,15 @@ namespace decoder_ring
                     end = i;
                 }
             }
-//formatting of a substring is : madlib.Substring(int start, int length)
-//madlib.Replace(search for, replacement)
+            //formatting of a substring is : madlib.Substring(int start, int length)
+            //madlib.Replace(search for, replacement)
 
             Console.WriteLine(madlib.Substring(start, end - start + 1));
-             string word1 = madlib.Substring(start, end - start +1);
+            string word1 = madlib.Substring(start, end - start + 1);
             Console.WriteLine(madlib.Replace(word1, answer1));
-           
 
-            
+
+
         }
-
-
     }
-    
 }

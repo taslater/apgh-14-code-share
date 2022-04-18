@@ -1,6 +1,4 @@
-Writing a Mad Libs 
-
-```csharp
+// Writing a Mad Libs 
 
 using System;
 
@@ -115,7 +113,7 @@ namespace MadLibs_Project
     }
 
     class Word
-        //for option a
+    //for option a
     {
         public string PartOfSpeech;
         //storing what we are asking the user to replace
@@ -124,6 +122,4 @@ namespace MadLibs_Project
     }
 }
 
-```
-
-Yemi Truechild (she/her) Tobias Tobak (he/him) Spenser Greeley
+// Yemi Truechild (she/her) Tobias Tobak (he/him) Spenser Greeley

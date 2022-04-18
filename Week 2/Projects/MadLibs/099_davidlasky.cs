@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace MadLibs
@@ -22,14 +21,14 @@ namespace MadLibs
                     //we finish building a term
                     insideBrackets = false;
                     //use questionPhrase to ask user for a word, immediately dump word into final answer in correct place
-                    finalOutput= finalOutput+AnswerPrompt(questionPhrase);
+                    finalOutput = finalOutput + AnswerPrompt(questionPhrase);
                     //erase questionPhrase to get ready for the next word
                     questionPhrase = "";
                 }
                 else if (insideBrackets)
                 {
                     //building the questionPhrase, the kind of word we're gonna ask for
-                    questionPhrase = questionPhrase + textRaw[i];  
+                    questionPhrase = questionPhrase + textRaw[i];
                 }
                 else
                 {
@@ -50,20 +49,20 @@ namespace MadLibs
         }
         static void Main(string[] args)
         {
-         
+
             string textRaw = "Oh about [number] days ago, I was walking in [place] when I saw a [tchotchke] and decided, you know what, I might just do a [crime] so that I can do get one! So I went ahead and [adverb] [verb] [number] times. Now, I wasn't that successful so officer [Person's Name] took me in his police car down to the station. Oh my, the things I shared a cell with! There was a [adjective] [noun], and a [adjective] [noun], and at least [number] [adjective] [plural nouns]! Anyways, I was sentenced to [time] years in prison where I spend my time [jerund] and [jerund].";
             bool playing = true;
             while (playing)
             {
                 Console.WriteLine("Do you wanna get NUTSO CRAZY with madlibs????(Y/N)");
                 string task = Console.ReadLine().ToUpper();
-                if (task=="Y")
+                if (task == "Y")
                 {
                     //playing game
                     FindWords(textRaw);
                 }
                 //quit game
-                else if (task=="N")
+                else if (task == "N")
                 {
                     playing = false;
                 }

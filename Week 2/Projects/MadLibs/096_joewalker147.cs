@@ -1,6 +1,5 @@
-current functional mad libs
+// current functional mad libs
 
-```
 using System;
 
 namespace MadLibs_Project
@@ -50,7 +49,7 @@ namespace MadLibs_Project
                 Console.WriteLine("Give me a " + tempPartOfSpeech);
                 string input = Console.ReadLine();
                 words[i].UserInput = input;
-               
+
             }
             Console.WriteLine($"{words[0].UserInput} is {words[1].UserInput}ing at the {words[2].UserInput} place");
 
@@ -64,6 +63,5 @@ namespace MadLibs_Project
 
     }
 }
-```
 
-Yemi Truechild (she/her) Tobias Tobak (he/him) Spenser Greeley 
+// Yemi Truechild (she/her) Tobias Tobak (he/him) Spenser Greeley 
