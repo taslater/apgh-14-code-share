@@ -1,6 +1,6 @@
 # Group 
 
-## Week 2 Day 4 - Mad Libs
+## Week 2 Day 4 - Mad Libs ##
 
 ### Group 1 ###
 * Sam (TA)
@@ -30,7 +30,7 @@
 * Spenser
 * Joseph
 
-## Week 2 Day 3 - Message System Redux & Decoder Ring/Caesar Cipher
+## Week 2 Day 3 - Message System Redux & Decoder Ring/Caesar Cipher ##
 
 ### Group 1 ###
 * Sam (TA)
@@ -60,7 +60,7 @@
 * Spenser
 * Jessica
 
-## Week 2 Day 2 - Calculator
+## Week 2 Day 2 - Calculator ##
 
 ### Group 1 ###
 * Sam (TA)
@@ -90,7 +90,7 @@
 * Thomas
 * Shauna
 
-## Week 2 Day 1 - 2 - Cash Register
+## Week 2 Day 1 - 2 - Cash Register ##
 
 ### Group 1 ###
 * Sam (TA)
@@ -120,7 +120,7 @@
 * Rich
 * Jessica
 
-## Week 2 Day 1 - 1 - Morse Code
+## Week 2 Day 1 - 1 - Morse Code ##
 
 ### Group 1 ###
 * Sam (TA)
@@ -150,7 +150,7 @@
 * Spenser
 * Shauna
 
-## Week 1 Day 4 - Battleship
+## Week 1 Day 4 - Battleship ##
 
 ### Group 1 ###
 * Scott (TA)
@@ -180,7 +180,7 @@
 * Jeremy
 * David
 
-## Week 1 Day 3 - Messaging System
+## Week 1 Day 3 - Messaging System ##
 
 ### Group 1 ###
 * Sam (TA)
