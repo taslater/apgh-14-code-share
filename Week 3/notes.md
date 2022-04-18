@@ -4,7 +4,7 @@ Ruby stuff
 
 ## Day 1 ##
 
-Setup IDE (VS Code)
+Setup IDE (VS Code), recap C# vs Ruby, using terminal to run scripts
 
 ### What is programming? ###
 
@@ -102,3 +102,75 @@ puts "I have #{3*feet} feet"
 ```
 
 I have 9 feet.
+
+### Compiled vs interpreted ###
+
+If there's stuff that has to happen repeatedly, compiled can be faster
+
+You can add code "on-the-fly" with interpreted languages
+
+Writing assembly, you probably can't outsmart a good compiler
+
+### Conditionals ###
+
+Make blocks of code optional
+
+The operators are the same as C#
+
+```ruby
+if true
+    puts "Hello, this is true!"
+end
+
+if false
+    puts "Hello, this is false!"
+end
+
+x = 10
+
+if x > 5
+    puts "x is greater than five"
+end
+```
+
+`if true` and `if (true)` both work, but `if true` is idiomatic to Ruby.
+
+### Scope ###
+
+Variable initialized with value:
+
+```ruby
+if true
+    y = "Hello there!"
+end
+
+puts "Y equals #{y}"
+```
+
+returns `Y equals Hello there!`
+
+Variable declared but uninitialized:
+
+```ruby
+if false
+    y = "Hello there!"
+end
+
+puts "Y equals #{y}"
+```
+
+returns `Y equals`
+
+Variable undeclared:
+
+```ruby
+if false
+    y = "Hello there!"
+end
+
+puts "Y equals #{y}"
+```
+
+throws `undefined local variable or method 'y' for main:Object (NameError)`
+
+### Boolean Syntax ###
