@@ -30,7 +30,7 @@ otherwise write `.rb` files
 
 `puts "Hello World!"`
 
-### Math stuff ###
+### Math operators ###
 
 basically the same as `C#` except we have exponentiation (`**`) in `ruby`
 
@@ -67,10 +67,38 @@ The terminal is another way to navigate file structures. Shared (Windows, etc) L
 * `ls` list everything in current working directory
 * `pwd` print current working directory
 * `cd <path>` change directory to `<path>`
-* `mkdir <foldername>` creates directory (folder) `<foldername>` 
+* `mkdir <foldername>` creates directory (folder) `<foldername>`
 * `Code <filename or path>` open file or folder with VS Code
 * `ruby <script.rb>` use local ruby to run `<script.rb>`
 * `ruby --version` check if local ruby interpreter is working (returns version number)
 * `which ruby` prints the path to `ruby` interpreter
 * `touch <filename>` creates file `<filename>` in current working directory
 
+### Variables (Ruby vs C#) ###
+
+* **not** staticatlly typed (type can change)
+* type declaration not required
+* type is inferred at initialization
+* no implicit conversion from int to string! (`.to_s`)
+
+There are pros and cons! (cf. `TypeScript`)
+
+### User input / String interpolation ###
+
+`gets` get string from CLI user (ie. `name = gets`)
+
+String interpolation is cool!
+
+```ruby
+feet = 3
+puts "I have #{feet} feet"
+```
+
+I have 3 feet.
+
+```ruby
+feet = 3
+puts "I have #{3*feet} feet"
+```
+
+I have 9 feet.
