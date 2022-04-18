@@ -164,10 +164,6 @@ returns `Y equals`
 Variable undeclared:
 
 ```ruby
-if false
-    y = "Hello there!"
-end
-
 puts "Y equals #{y}"
 ```
 
