@@ -170,3 +170,17 @@ puts "Y equals #{y}"
 throws `undefined local variable or method 'y' for main:Object (NameError)`
 
 ### Boolean Syntax ###
+
+TODO
+
+### Loops ###
+
+While:
+
+```ruby
+counter = 0
+while counter < 10
+    puts "Hello there!"
+    counter += 1
+end
+```
