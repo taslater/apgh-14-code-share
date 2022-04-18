@@ -184,3 +184,26 @@ while counter < 10
     counter += 1
 end
 ```
+
+For loops in ruby are actually each loops:
+
+```ruby
+(1..10).each do |i|
+    puts i
+end
+```
+
+```ruby
+for i in 1..10 # 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    i = 100
+    puts i
+end
+```
+
+Prints 100 ten times.
+
+```ruby
+([1, 3, 2]).each do |i|
+    puts i
+end
+```
