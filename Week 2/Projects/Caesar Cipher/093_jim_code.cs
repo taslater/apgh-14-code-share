@@ -1,6 +1,6 @@
-andrew: Joe W (he/him) shaunapage 
-Team 3 functioning code:
-```csharp
+// andrew: Joe W (he/him) shaunapage 
+// Team 3 functioning code:
+
 using System;
 
 namespace DecoderRing01
@@ -122,4 +122,3 @@ namespace DecoderRing01
         }
      }
 }
-```

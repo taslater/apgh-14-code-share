@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace Caesar_Cipher
@@ -16,32 +15,33 @@ namespace Caesar_Cipher
             // ask for the encoded message
             // ask for the rotation
             // show the decoded version
-            
-            
+
+
             bool on = true;
             while (on)
             {
-            Console.WriteLine("\nDo you want to encrypt or decrypt a message?");
-            Console.WriteLine("a)encrypt message \nb)decrypt message \nc)quit");
-            string response = Console.ReadLine().ToLower();
+                Console.WriteLine("\nDo you want to encrypt or decrypt a message?");
+                Console.WriteLine("a)encrypt message \nb)decrypt message \nc)quit");
+                string response = Console.ReadLine().ToLower();
                 if (response == "a")
                 {
                     Console.WriteLine("\nType a message to encrypt.");
                     string input = Console.ReadLine().ToLower();
                     Console.WriteLine("What is the rotation?");
                     int rotation = Convert.ToInt32(Console.ReadLine());
-                    for(int i = 0; i <input.Length; i++)
+                    for (int i = 0; i < input.Length; i++)
                     {
                         Console.Write(cipher(input[i], rotation));
                     }
                 }
+
                 else if (response == "b")
                 {
                     Console.WriteLine("\nType encrypted message.");
                     string input = Console.ReadLine().ToLower();
                     Console.WriteLine("What is the rotation?");
                     int rotation = Convert.ToInt32(Console.ReadLine());
-                    for(int i = 0; i <input.Length; i++)
+                    for (int i = 0; i < input.Length; i++)
                     {
                         Console.Write(decipher(input[i], rotation));
                     }
@@ -55,17 +55,25 @@ namespace Caesar_Cipher
 
             }
         }
-            public static char cipher(char input, int rotation)
+        public static char cipher(char input, int rotation)
+        {
+            char currentletter = (char)(input + rotation);
+            if((int) currentletter > 122)
             {
-            return (char)(input + rotation);
-            
+                currentletter = (char)(input - 24);
             }
-            public static char decipher(char input, int rotation)
-            {
-            return (char)(input - rotation);
-            }
+            return currentletter;
         }
+        public static char decipher(char input, int rotation)
+        {
+            char currentletter = (char)(input - rotation);
+            if((int) currentletter < 97)
+            {
+                currentletter = (char)(input + 24);
+            }
+            return currentletter;
 
+        }
     }
 
-```
+}

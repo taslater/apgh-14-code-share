@@ -1,6 +1,6 @@
-Team 2:fixed encryption
-Rich Stanley jallison Harrison (They / Them) 
-```
+// Team 2:fixed encryption
+// Rich Stanley jallison Harrison (They / Them) 
+
 using System;
 
 namespace Caesar_Cipher
@@ -88,9 +88,4 @@ namespace Caesar_Cipher
 
         }
     }
-
 }
-
-
-
-```

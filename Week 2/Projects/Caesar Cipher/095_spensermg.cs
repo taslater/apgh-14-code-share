@@ -1,5 +1,5 @@
-imaniemanuel: Tobias Tobak (he/him) Jessica Yockey 
-```csharp
+// imaniemanuel: Tobias Tobak (he/him) Jessica Yockey 
+
 using System;
 
 namespace Decoder_Rings
@@ -89,4 +89,3 @@ namespace Decoder_Rings
         }
     }
 }
-```

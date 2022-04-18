@@ -1,8 +1,7 @@
-davidlasky Yemi Truechild (she/her) Renat  samsnowdon
+// davidlasky Yemi Truechild (she/her) Renat  samsnowdon
 
-Caesar salad encryption/decryption project:
+// Caesar salad encryption/decryption project:
 
-```csharp
 using System;
 
 namespace decoder
@@ -85,7 +84,6 @@ namespace decoder
             Console.WriteLine(converted);
         }
     }
-} 
-```
+}
 
-(Repost from Academy Session 14 chat w/ minor modifications)
+// Repost from Academy Session 14 chat w/ minor modifications

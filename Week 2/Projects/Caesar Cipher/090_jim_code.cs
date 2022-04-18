@@ -1,6 +1,4 @@
-Team 3 current working code for encryption: andrew Joe W (he/him) shaunapage 
-
-```csharp
+// Team 3 current working code for encryption: andrew Joe W (he/him) shaunapage 
 using System;
 
 namespace DecoderRing01
@@ -65,4 +63,4 @@ namespace DecoderRing01
             return finalMessage;
         }
     }
-}```
+}
