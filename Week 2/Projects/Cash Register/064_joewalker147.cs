@@ -1,6 +1,5 @@
-cash register - bonus random
+// cash register - bonus random
 
-```
 using System;
 
 namespace project_next
@@ -42,8 +41,8 @@ namespace project_next
             int lastbox = lastdigit.Length - 1;
 
             if (lastdigit[lastbox] != '3')
-                {
-                
+            {
+
                 Console.WriteLine("your change is " + showchange);
 
                 //identify if change ends with 3
@@ -110,11 +109,6 @@ namespace project_next
                 // produce the change in a random order
 
             }
-
-
-
         }
     }
 }
-
-```

@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace project_next
@@ -84,11 +83,11 @@ namespace project_next
             Console.WriteLine("The change you will be receiving is:");
             string[] bills = { ": 20 dollar bill(s)", ": 10 dollar bill(s)", ": 5 dollar bill(s)", ": 1 dollar bill(s)", " Quarter(s)", " Dime(s)", " Nickel(s)", " Pennie(s)" };
 
-            for (int i  = 0; i < 8; i++)
+            for (int i = 0; i < 8; i++)
             {
                 if (breakdown[i] > 0)
                 {
-                Console.Write(breakdown[i]+bills[i]+", ");
+                    Console.Write(breakdown[i] + bills[i] + ", ");
                 }
                 //Console.WriteLine();
 
@@ -96,5 +95,3 @@ namespace project_next
         }
     }
 }
-
-```

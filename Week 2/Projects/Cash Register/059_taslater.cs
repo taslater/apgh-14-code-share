@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace CashRegister
@@ -138,7 +137,7 @@ namespace CashRegister
 
             // declaring string that we will print out to display results to user
             // message will tell the user __totalChange__ and all the change denominations
-            string outMessage = $"Your change is ${ totalChange} which amounts to";
+            string outMessage = $"Your change is ${totalChange} which amounts to";
 
             // invoking function once per denomination
             outMessage = updateOutMessage(outMessage, twenties, "twenty");
@@ -186,5 +185,3 @@ namespace CashRegister
         }
     }
 }
-
-```

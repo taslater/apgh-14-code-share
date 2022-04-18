@@ -1,5 +1,5 @@
-Cash Register with Modulo
-```
+// Cash Register with Modulo
+
 using System;
 
 namespace Session14Week2
@@ -20,7 +20,7 @@ namespace Session14Week2
 
             // show them the amount of change they're getting back
             int change = paid - cost;
-            Console.WriteLine("I owe you $" + change/100.0);
+            Console.WriteLine("I owe you $" + change / 100.0);
 
             // show them the denominations they're getting back
 
@@ -43,7 +43,5 @@ namespace Session14Week2
 
             Console.ReadLine();
         }
-
-
     }
 }

@@ -1,4 +1,4 @@
-```using System;
+using System;
 
 namespace registerApp
 {
@@ -29,7 +29,7 @@ namespace registerApp
             decimal total = paid - cost;
             Console.WriteLine("your change is: " + total);
 
-            
+
 
             int twenty = 0;
             int ten = 0;
@@ -40,9 +40,9 @@ namespace registerApp
             int nickel = 0;
             int penny = 0;
 
-            
+
             while (total > 0)
-            {  
+            {
                 if (total >= 20)
                 {
                     twenty = twenty + 1;
@@ -87,7 +87,7 @@ namespace registerApp
 
 
             }
-            
+
             Console.WriteLine("this is the number of 20's.. " + twenty);
             Console.WriteLine("this is the number of 10's.. " + ten);
             Console.WriteLine("this is the number of 5's.. " + five);
@@ -100,4 +100,3 @@ namespace registerApp
         }
     }
 }
-```

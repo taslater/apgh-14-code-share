@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace Cash_Register
@@ -37,7 +36,7 @@ namespace Cash_Register
                 Console.WriteLine("The last number is 3.");
                 //Utilize a loop similar to the else statement where the changes is produced in a random order
                 //Have to be a while loop that keeps selecting change once each time through until it reaches zero
-                while(change > 0)
+                while (change > 0)
                 {
                     int numeral = 0;
 
@@ -165,5 +164,6 @@ namespace Cash_Register
         }
     }
 }
-```
-andrew imaniemanuel Joe W (he/him) I took a crack at getting the system to randomly generate change if it ended in a 3. It's lengthy but works, found a random number generating function and included comments
+
+// andrew imaniemanuel Joe W (he/him)
+// I took a crack at getting the system to randomly generate change if it ended in a 3. It's lengthy but works, found a random number generating function and included comments

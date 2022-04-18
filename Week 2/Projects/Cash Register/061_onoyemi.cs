@@ -1,4 +1,3 @@
-```
 using System;
 
 namespace Cash_Register
@@ -29,12 +28,12 @@ namespace Cash_Register
                 Console.WriteLine(change);
             }
             if (change <= 99)
-                {
+            {
                 int twenties = (int)Math.Floor(change / 20);
                 Console.WriteLine("Twenties = " + twenties);
                 change = change - twenties * 20;
                 Console.WriteLine(change);
-                }
+            }
             if (change <= 20)
             {
                 int tens = (int)Math.Floor(change / 10);
@@ -87,5 +86,3 @@ namespace Cash_Register
         }
     }
 }
-
-```
