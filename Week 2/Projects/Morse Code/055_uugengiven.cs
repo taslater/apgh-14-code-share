@@ -1,5 +1,5 @@
-Morse Code with dictionary arrays
-```
+// Morse Code with switch
+
 using System;
 
 namespace Session14Week2
@@ -12,10 +12,6 @@ namespace Session14Week2
             // convert that into morse code
             // spit the message back out
 
-            char[] b = { 'A', 'B', 'C', 'D', 'E' };
-            string[] c = { ".- ", "-.. ", "-.-. ", "-... ", ". " };
-
-
             Console.WriteLine("What message would you like to translate?");
             string message = Console.ReadLine();
             message = message.ToUpper();
@@ -25,14 +21,22 @@ namespace Session14Week2
             {
                 // if(message[i] == 'a')
 
-                for (int j = 0; j < b.Length; j++)
+                switch (message[i])
                 {
-                    if (message[i] == b[j])
-                    {
-                        output = output + c[j];
-                    }
-                }
+                    case 'A':
+                        output = output + ".- ";
+                        break;
+                    case 'B':
+                        output = output + "-... ";
+                        break;
+                    case 'C':
+                        output = output + "-.-. ";
+                        break;
+                    case 'D':
+                        output = output + "-.. ";
+                        break;
 
+                }
             }
 
             Console.WriteLine("Your translated message is " + output);

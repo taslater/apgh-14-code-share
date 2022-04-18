@@ -1,6 +1,5 @@
-Tobias Tobak (he/him): Jessica Yockey jallison 
+// Tobias Tobak (he/him): Jessica Yockey jallison 
 
-```csharp
 using System;
 
 namespace MorseCode01
@@ -138,9 +137,8 @@ namespace MorseCode01
                 Console.Write(output + " ");
 
             }
-            
+
 
         }
     }
 }
-```

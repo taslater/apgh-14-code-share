@@ -1,4 +1,3 @@
-```
 using System;
 
 
@@ -17,7 +16,7 @@ namespace morse_code
             Console.WriteLine("Want morse? Tell me what to say!");
             string message = Console.ReadLine().ToUpper();
 
-           for (int i = 0; i < message.Length; i++)
+            for (int i = 0; i < message.Length; i++)
             {
                 if (message[i] == ' ')
                 {
@@ -27,7 +26,7 @@ namespace morse_code
                 {
                     Console.Write(".- ");
                 }
-                else if (message[i]== 'B')
+                else if (message[i] == 'B')
                 {
                     Console.Write("-... ");
                 }
@@ -127,14 +126,12 @@ namespace morse_code
                 {
                     Console.Write("--.. ");
                 }
-                    else 
-                        {
-                            //Console.WriteLine("Does not compute!");
-                        }
+                else
+                {
+                    //Console.WriteLine("Does not compute!");
+                }
             }
 
         }
     }
 }
-
-```

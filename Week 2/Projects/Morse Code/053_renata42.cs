@@ -1,5 +1,3 @@
-```
-
 using System;
 
 namespace project_3_morsse
@@ -16,7 +14,7 @@ namespace project_3_morsse
 
             // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
-             string[] morse = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... "
+            string[] morse = { ".- ", "-... ", "-.-. ", "-.. ", ". ", "..-. ", "--. ", ".... "
              , ".. ", ".--- ", "-.- ", ".-.. ", "-- ", "-. ", "--- ", ".--. ", "--.- ", ".-. "
              , "... ", "- ", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. " };
 
@@ -54,13 +52,13 @@ namespace project_3_morsse
                     {
                         Console.Write(" / ");                     //user.removeCat (keeps cats off keyboard)
                         previouswasspace = true;
-                    }    
+                    }
                     continue;             // <--- flow control. If you get inside that f block. Once you hit continue it goes back to for.
                 }
 
                 //Console.WriteLine($"{c} {n} {morse[n]}");
 
-                
+
                 Console.Write(morse[n]);
                 previouswasspace = false;
             }
@@ -86,5 +84,3 @@ namespace project_3_morsse
         }
     }
 }
-
-```
