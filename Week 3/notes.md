@@ -223,3 +223,43 @@ quite rare
 #### Retry ####
 
 extremely rare
+
+## Day 2 ##
+
+Arrays, etc
+
+### Arrays in Ruby ###
+
+`someArray = ["first", "second", "third"]`
+
+Arrays can hold arrays, different types
+
+Multidimensional arrays with `[][]` notation
+
+#### Print array using loop ####
+
+`puts colors[0..2]`
+
+```ruby
+colors.each do |color|
+    puts color
+end
+```
+
+Add stuff to array
+
+Shovel `<<`
+
+`colors[4] = "orange"`
+
+If you assign something to a late spot in an array, Ruby will allocate empty spots in between.
+
+Three states of a variable (including spots in an array):
+
+1. Defined and has value
+    * ie `x = 10`
+1. Defined and has no value
+    * ie `x = nil`
+1. Undefined
+    * C# does not permit this during execution (will not compile), although it can happens sometimes?
+    * Ruby allows.
