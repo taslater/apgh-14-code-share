@@ -236,7 +236,7 @@ Arrays can hold arrays, different types
 
 Multidimensional arrays with `[][]` notation
 
-#### Print array using loop ####
+### Print array using loop ###
 
 `puts colors[0..2]`
 
@@ -263,3 +263,39 @@ Three states of a variable (including spots in an array):
 1. Undefined
     * C# does not permit this during execution (will not compile), although it can happens sometimes?
     * Ruby allows.
+
+## Hash Tables ##
+
+Like arrays, but associative. Kinda like proto-classes?
+
+They have key-value pairs, like a dictionary or something.
+
+```ruby
+birthdays = {}
+birthday["jean"] = "4/17/84"
+birthday["john"] = "9/12/78"
+```
+
+```ruby
+birthdays = {
+    "john" => "4/17/84",
+    "john" => "9/12/78"
+}
+```
+
+## Symbols aren't strings? ##
+
+You can create "special" words called symbols!
+
+```ruby
+my_name = :john
+"john".to_sym
+```
+
+Sometimes used in hash tables to make stuff easier?
+
+```ruby
+person = {}
+person[:name] = "John"
+person[:knees] = "Mostly, yes"
+```
