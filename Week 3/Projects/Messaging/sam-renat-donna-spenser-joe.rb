@@ -1,13 +1,14 @@
 ##======messaging system=====
 #display options for leaving a message, retreiving a message, exiting
-#storing user input as a message
-#provide ID for message to be retreived
+#option a - storing user input as a message
+#option a - provide ID for message to be retreived
 
-#using ID pull message out to be seen
+#option b - using ID pull message out to be seen
 
-#leave program
-
+#option c - leave program
+name = []
 message = []
+time = []
 keepgoing = true
 
 while(keepgoing)
@@ -17,8 +18,11 @@ while(keepgoing)
 
     if option =="a"
         #store messages
+        puts"Who may I ask is leaving a message?"
+        name << gets.chomp
         puts "What is the message you would like to store"
-        message << gets
+        message << gets.chomp
+        time << Time.now
         puts "your message ID number is #{message.length - 1}"
 
 
@@ -26,8 +30,9 @@ while(keepgoing)
         #retrieve message
         puts "What is the ID number of your message" 
         id = gets.chomp.to_i
-        puts message[id]
-          
+        puts "at #{time[id]}"
+        puts "#{name[id]} has left you the following message: #{message[id]} "
+
 
     elsif option =="c"
         #quit
