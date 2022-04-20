@@ -299,3 +299,33 @@ person = {}
 person[:name] = "John"
 person[:knees] = "Mostly, yes"
 ```
+
+### Iterate characters in string ##
+
+```ruby
+"hello".chars.each do |c|
+    puts c
+end
+
+"hello".each_char do |c|
+    puts c
+end
+
+"hello".split("").each do |c|
+    puts c
+end
+
+(0..."hello".length).each do |i|
+    puts "hello"[i]
+end
+```
+
+### A note on dots (ranges) ###
+
+```ruby
+(1..3).each # 1,2,3
+(1...3).each # 1,2
+```
+
+* 2 dots (`(1..3)`): inclusive (1,2,3)
+* 3 dots (`(1...3)`): exclusive (1,2)
