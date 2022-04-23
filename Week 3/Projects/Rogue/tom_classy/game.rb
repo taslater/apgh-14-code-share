@@ -51,8 +51,12 @@ class Game
     "\| #{message + " " * (self.char_width - message.length - 1)}\|"
   end
 
-  def controls_display
-    ["w,a,s,d to move", "p to quit"].map { |s| self.menu_line(s) }.join("\n")
+  def info_display(infos)
+    infos.map { |s| self.menu_line(s) }.join("\n")
+  end
+
+  def instructions
+    self.info_display(["w,a,s,d to move", "p to quit"])
   end
 
   def display_grid
@@ -65,9 +69,13 @@ class Game
   def to_s
     system("clear") || system("cls")
     "#{self.h_line}\n"\
-    "#{self.controls_display}\n"\
+    "#{self.instructions}\n"\
     "#{self.h_line}\n"\
     "#{self.display_grid.map { |row| "\|#{row.join(" ")}\|" }.join("\n")}\n"\
-    "#{self.h_line}\n"
+    "#{self.h_line}\n"\
+    "#{self.info_display([@player.message])}\n"\
+    "#{self.h_line}\n"\
+    "#{self.info_display(@player.info)}\n"\
+    "#{self.h_line}"
   end
 end
