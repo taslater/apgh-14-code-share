@@ -1,3 +1,5 @@
+require './player_messages'
+
 class Player
   @@max_hp = 10
 
@@ -8,46 +10,9 @@ class Player
     "s" => [0, +1],
   }
 
-  @@wandering_messages = [
-    "...",
-    "...",
-    "...",
-    "...",
-    "...",
-    "Kinda dark?",
-    "It's ... dungeon-y",
-    "Mom? Is that you?"
-  ]
-
-  @@gold_messages = [
-    "Yummy munny!",
-    "My precious!",
-    "Saving for college"
-  ]
-
-  @@ouch_messages = [
-    "Owie",
-    "Yikes",
-    "That burns",
-    "Unpleasant"
-  ]
-
-  @@won_messages = [
-    "I'm the best",
-    "Feels good",
-    "Such confidence",
-    "Oooh the swagger"
-  ]
-
-  @@dead_messages = [
-    "Jeez, I'm dead",
-    "Not what I expected",
-    "Had such high hopes",
-    "Hard to move when dead"
-  ]
-
   def initialize(world:)
     @world = world
+    @messages = PlayerMessages.new
     @hp = @@max_hp
     @pos = @world.center.dup
     @gold = 0
@@ -59,11 +24,11 @@ class Player
   def randomize_message
     case @status
     when :won
-      @message = @@won_messages.sample
+      @message = @messages.won
     when :dead
-      @message = @@dead_messages.sample
+      @message = @messages.won
     else
-      @message = @@wandering_messages.sample
+      @message = @messages.wander
     end
   end
 
@@ -111,7 +76,7 @@ class Player
 
   def damage
     @hp -= 1
-    @message = @@ouch_messages.sample
+    @message = @messages.ouch
     if @hp <= 0
       @message = "I ded."
       @status = :dead
@@ -128,7 +93,7 @@ class Player
       @message = "I WON!"
       @status = :won
     else
-      @message = @@gold_messages.sample
+      @message = @messages.gold
     end
   end
 
