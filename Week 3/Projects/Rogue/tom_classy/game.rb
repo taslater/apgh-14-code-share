@@ -4,10 +4,13 @@ require 'io/console'
 
 class Game
   def initialize(n_rows:, n_cols:, lava_ratio: 0.1, gold_ratio: 0.1)
-    @world = World.new(n_rows, n_cols, lava_ratio, gold_ratio)
+    @world = World.new(
+      n_rows: n_rows,
+      n_cols: n_cols,
+      lava_ratio: lava_ratio,
+      gold_ratio: gold_ratio
+    )
     @player = Player.new(world: @world)
-    # self.add_material(:lava, lava_ratio)
-    # self.add_material(:gold, gold_ratio)
     puts self
     @playing = true
   end

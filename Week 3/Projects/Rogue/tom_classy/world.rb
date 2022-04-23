@@ -5,7 +5,7 @@ class World
     lava: "~",
   }
 
-  def initialize(n_rows, n_cols, lava_ratio, gold_ratio)
+  def initialize(n_rows:, n_cols:, lava_ratio:, gold_ratio:)
     @n_rows = n_rows
     @n_cols = n_cols
     @grid = Array.new(@n_rows) { Array.new(@n_cols) { :ground } }
