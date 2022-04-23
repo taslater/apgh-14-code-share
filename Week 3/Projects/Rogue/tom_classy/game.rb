@@ -39,17 +39,35 @@ class Game
     system("clear") || system("cls")
   end
 
-  def h_line
-    "+#{"-" * (2 * @world.n_cols - 1)}+"
+  def char_width
+    (2 * @world.n_cols - 1)
   end
 
-  def to_s
+  def h_line
+    "+#{"-" * self.char_width}+"
+  end
+
+  def menu_line(message)
+    "\| #{message + " " * (self.char_width - message.length - 1)}\|"
+  end
+
+  def controls_display
+    ["w,a,s,d to move", "p to quit"].map { |s| self.menu_line(s) }.join("\n")
+  end
+
+  def display_grid
     display_grid = @world.display_grid
     player_pos = @player.pos
     display_grid[player_pos[0]][player_pos[1]] = @player.to_s
+    display_grid
+  end
+
+  def to_s
     system("clear") || system("cls")
     "#{self.h_line}\n"\
-    "#{display_grid.map { |row| "\|#{row.join(" ")}\|" }.join("\n")}\n"\
-    "#{self.h_line}"
+    "#{self.controls_display}\n"\
+    "#{self.h_line}\n"\
+    "#{self.display_grid.map { |row| "\|#{row.join(" ")}\|" }.join("\n")}\n"\
+    "#{self.h_line}\n"
   end
 end
