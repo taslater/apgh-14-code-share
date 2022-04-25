@@ -49,6 +49,7 @@ Testing is largely invisible to management
 Test all the "interesting" cases
 
 * Have a rationale for the cases, not too many, not too few
+* Maximize coverage and minimize the number of cases
 
 Should be readable
 
@@ -57,3 +58,7 @@ Should cover failure cases
 Should be built when requirements dictate
 
 * You ain't gonna need it: [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+
+### Heuristics? ###
+
+Write tests to hit **each branch** of your function and also mix-and-match to hit combinations of branches, but you don't need every possible combination.
