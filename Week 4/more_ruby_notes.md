@@ -17,3 +17,13 @@ These tests prone to breaking if they're too specific
 Unit test the little fiddly well-defined bits
 
 Allow there to be some flexibility in your UI design pretty stuff, otherwise ppl will just ignore your tests...?
+
+## Rspec before ##
+
+```ruby
+before (:each) do
+  @calc = Calculator.new
+end
+```
+
+* What is Rspec let for?? Ppl on the internets seem to like `let`
