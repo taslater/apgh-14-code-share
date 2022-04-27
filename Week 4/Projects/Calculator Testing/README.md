@@ -1,5 +1,9 @@
 # Calculator Testing #
 
+Let's create and test a calculator that interprets a string input
+
+`calculate('1 + 1') => 2`
+
 ## Groups/Teams ##
 
 Team 1: Hot crossed buns - Scott
