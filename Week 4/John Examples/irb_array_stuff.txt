@@ -1,0 +1,42 @@
+john@APGH-INSTRUCT > irb
+irb(main):001:0> math = ["2", "+", "3", "*", "5"]
+=> ["2", "+", "3", "*", "5"]
+irb(main):002:0> math[0...2]
+=> ["2", "+"]
+irb(main):003:0> math[3..]
+=> ["*", "5"]
+irb(main):004:0> math
+=> ["2", "+", "3", "*", "5"]
+irb(main):005:1* math[1..
+irb(main):006:1*   ^C
+irb(main):005:0> math[1..]
+=> ["+", "3", "*", "5"]
+irb(main):006:0> math[(1+2)..]
+=> ["*", "5"]
+irb(main):007:0> math[(3+2)..]
+=> []
+irb(main):008:0> exit
+Terminate batch job (Y/N)? y
+john@APGH-INSTRUCT >
+john@APGH-INSTRUCT > irb
+irb(main):001:0> left = ["2", "+"]
+=> ["2", "+"]
+irb(main):002:0> answer = 10
+=> 10
+irb(main):003:0> right = ["/", "2"]
+=> ["/", "2"]
+irb(main):004:0> left + answer
+Traceback (most recent call last):
+        5: from C:/tools/ruby27/bin/irb.cmd:31:in `<main>'
+        4: from C:/tools/ruby27/bin/irb.cmd:31:in `load'
+        3: from C:/tools/ruby27/lib/ruby/gems/2.7.0/gems/irb-1.2.6/exe/irb:11:in `<top (required)>'
+        2: from (irb):4
+        1: from (irb):4:in `+'
+TypeError (no implicit conversion of Integer into Array)
+irb(main):005:0> left + right
+=> ["2", "+", "/", "2"]
+irb(main):006:0> left + [answer] + right
+=> ["2", "+", 10, "/", "2"]
+irb(main):007:0> [1, 2] + [3, 4]
+=> [1, 2, 3, 4]
+irb(main):008:0>
