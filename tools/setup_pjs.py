@@ -1,9 +1,16 @@
-# Autocomplete search function #
+import os
+from pathlib import Path
 
-## Tests ##
+current_dir = './'
+pj_names = ['andy_yemi_tom_rich',
+            'shauna_jeremy_joe_james',
+            'tobias_david_renat_imani', 'jessica_donna_spenser_harrison']
 
-```ruby
-require "autocomplete"
+pj_structure = [('/lib', ['autocomplete.rb']),
+                ('/spec', ['autocomplete_spec.rb'])]
+
+
+spec_text = """require "autocomplete"
 
 describe Autocomplete do
     context "When given cat, car, dog" do
@@ -33,49 +40,17 @@ describe Autocomplete do
         end
     end
 end
-```
+"""
 
-## Empty Autocomplete Class ##
-
-```ruby
-class Autocomplete
-    def initialize
-    end
-
-    def AddWords words
-    end
-
-    def Complete partial
-    end
-end
-```
-
-## Groups ##
-
-Team 1: PEW-PEW laser gun - Sam
-
-* Jessica
-* Donna
-* Spenser
-* Harrison
-
-Team 2: Paddling a canoe - Joyce
-
-* Tobias
-* David
-* Renat
-* Imani
-
-Team 3: Eat the bourgeoisie - Scott
-
-* Shauna
-* Jeremy
-* Joe
-* James
-
-Team 4: Hear me roar - Kelvin
-
-* Andrew
-* Yemi
-* Tom
-* Rich
+for pj_name in pj_names:
+    dir_name = current_dir + pj_name
+    os.mkdir(dir_name)
+    for sub_dir, filenames in pj_structure:
+        sub_dir_path = '/'.join([dir_name, sub_dir])
+        os.mkdir(sub_dir_path)
+        for filename in filenames:
+            file_path = '/'.join([sub_dir_path, filename])
+            Path(file_path).touch()
+            if filename == 'autocomplete_spec.rb':
+                with open(file_path, "w") as f:
+                    f.write(spec_text)
