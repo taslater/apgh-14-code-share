@@ -1,5 +1,10 @@
 # User Interaction w/ SQL db #
 
+Ask the user if they want to show address book or add to address book
+If show, list all of the names and addresses (or phone numbers)
+If add, ask the user for the name, address (or phone number), add those as a new row to the database
+Show the menu again
+
 ## Groups/Teams ##
 
 Team 1: Fun, Fun, Fun - Joyce
