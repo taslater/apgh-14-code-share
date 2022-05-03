@@ -10,6 +10,8 @@ C# has the `List<T> Class` (System.Collections.Generic)
 
 ## Data Normalization ##
 
+Handling horizontal and vertical Repetition
+
 Organize the data into fields in your tables!
 
 Unnormalized form, first normalized form, second normalized form...
@@ -24,4 +26,14 @@ Less repeated data, fewer typos, correct it once, make sure it's always "Philade
 
 Capture the relationships between the data
 
-### Horizontal and Vertical Repetition ###
+## Basic SQL Syntax ##
+
+`SELECT <column_names> FROM <table_name> WHERE <condition>;`
+
+`INSERT INTO <table_name> (<col_1>, <col_2>) VALUES (<val_1>, <val_2>);`
+
+## C# Execute SQL ##
+
+```csharp
+string insertStmt = "INSERT INTO phone_tbl (phone_number) VALUES ('123-456-7890')"
+```
