@@ -1,4 +1,3 @@
-
 //Andy, David, Imani, James; Team 1: Fun, Fun, Fun
 using System;
 using System.Data.SqlClient;
@@ -9,7 +8,7 @@ namespace DatabaseTry
     {
         static void Main(string[] args)
         {
-            //I named my table 'Addresses' and has the columns "Name, Street, City, Zip, Phone"
+            //I named my table "Addresses" and has the columns "Name, Street, City, Zip, Phone"
 
             // Create the variable connection that is a SQL connection
             SqlConnection connection;
@@ -22,7 +21,7 @@ namespace DatabaseTry
             while (tableMore)
             {
                 //Display a menu of what options to pick from and take in the answer
-                Console.WriteLine("Would you like to: \nA: Display table info? \nB: Add info to table?\nQ: Quit");
+                Console.WriteLine("Would you like to: \nA: Display table info? \nB: Add info to table? \nC: Update an entry?\nD: Delete an entry? \nQ: Quit");
                 string task = Console.ReadLine().ToUpper();
 
                 //Open the connection to the database (this needs to be inside the while loop or it breaks)
@@ -78,22 +77,84 @@ namespace DatabaseTry
                     reader.Close();
                 }
 
+                else if (task == "C")
+                {
+                    //Display the address book after adding in gathered data; same as selecting A
+                    command = new SqlCommand("SELECT * FROM Addresses", connection);
+                    reader = command.ExecuteReader();
 
+                    while (reader.Read())
+                    {
+                        Console.WriteLine($"ID: {reader["Id"]} | Name: {reader["Name"]} | Street address: {reader["Street"]} | Phone number: {reader["Phone"]}");
+                    }
+                    //Politely close the reader
+                    reader.Close();
+
+                    //Ask user for which entry they would like to change
+                    Console.WriteLine("Enter the ID of the entry you wish to update: ");
+                    int updateID = Convert.ToInt32(Console.ReadLine());
+
+                    //Just have the user reput in all the information (yikes UX)
+                    Console.WriteLine("What's the new name?");
+                    string name = Console.ReadLine();
+                    Console.WriteLine("What's the new street?");
+                    string street = Console.ReadLine();
+                    Console.WriteLine("What's the new city");
+                    string city = Console.ReadLine();
+                    Console.WriteLine("What's the new zip code?");
+                    string zip = Console.ReadLine();
+                    Console.WriteLine("What's the new phone number?");
+                    string phone = Console.ReadLine();
+
+                    //Make new command that sets the entered answers into the entry that was chosen
+                    command = new SqlCommand($"UPDATE Addresses SET Name = '{name}', Street = '{street}', City = '{city}', Zip = '{zip}', Phone = '{phone}' WHERE ID = '{updateID}'", connection);
+                    command.ExecuteNonQuery();
+                }
+
+                else if (task == "D")
+                {
+                    //Display the address book after adding in gathered data; same as selecting A
+                    command = new SqlCommand("SELECT * FROM Addresses", connection);
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Console.WriteLine($"ID: {reader["Id"]} | Name: {reader["Name"]} | Street address: {reader["Street"]} | Phone number: {reader["Phone"]}");
+                    }
+                    //Politely close the reader
+                    reader.Close();
+
+                    //Ask user for what entry they want to delete
+                    Console.WriteLine("Enter the ID of the entry you would like removed: ");
+                    int removeitem = Convert.ToInt32(Console.ReadLine());
+
+                    //Delete it
+                    command = new SqlCommand($"DELETE FROM Addresses WHERE Id = '{removeitem}'", connection);
+                    command.ExecuteNonQuery();
+                }
+
+                //Quit program
                 else if (task == "Q")
                 {
                     tableMore = false;
                 }
 
+                //Ooooo secret option
+                else if (task == "PSST")
+                {
+                    Console.WriteLine("Oh you found the secret! Congratulations! *high five*");
+                }
+
+                //No option properly entered
                 else
                 {
                     Console.WriteLine("Did not compute, beep boop");
                 }
+
                 //Close the connection
                 connection.Close();
             }
         }
     }
 }
-
-
 
