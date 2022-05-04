@@ -37,3 +37,11 @@ Capture the relationships between the data
 ```csharp
 string insertStmt = "INSERT INTO phone_tbl (phone_number) VALUES ('123-456-7890')"
 ```
+
+## SQL UPDATE ##
+
+`UPDATE` can obliterate every row in a column
+
+`UPDATE Addresses SET Name = 'Now the Name column is dead';`
+
+Never run code against production. Always test it in development first. Then test QA. No 'typing' code immediately against production! TEST IT!
