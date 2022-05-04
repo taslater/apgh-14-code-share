@@ -45,3 +45,9 @@ string insertStmt = "INSERT INTO phone_tbl (phone_number) VALUES ('123-456-7890'
 `UPDATE Addresses SET Name = 'Now the Name column is dead';`
 
 Never run code against production. Always test it in development first. Then test QA. No 'typing' code immediately against production! TEST IT!
+
+## SQL Injection Attacks ##
+
+![Exploits of a Mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
+Keep up with the latest trends in web security and best practices using [OWASP](https://owasp.org)
