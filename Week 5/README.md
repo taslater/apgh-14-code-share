@@ -1,5 +1,14 @@
 # Databases I guess? #
 
+## How to talk to your database friends ##
+
+1. Connection
+   * Which DB are you trying to reach?
+1. Command
+   * What would you like to do?
+1. Execution
+   * Actually do the command and provide a place to return data.
+
 ## C# is back ##
 
 Not just arrays in C#!
